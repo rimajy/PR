@@ -32,6 +32,9 @@ public class Main {
         // Обчислюємо та виводимо медіану
         double median = calculateMedian(numbers);
         System.out.println("Медіана: " + median);
+        //Обчислюємо та виводимо середнє значення
+        double average = calculateAverage(numbers);
+        System.out.println("Середнє: " + average);
     }
     // Метод для конвертації десяткового числа в бінарне представлення у доповнювальному коді
     public static String decimalToBinary(int n) {
@@ -68,5 +71,12 @@ public class Main {
             return list.get(size / 2);
         }
     }
-
+    // Метод для обчислення середнього значення
+    public static double calculateAverage(List<Integer> list) {
+        int sum = 0;
+        for (int num : list) {
+            sum += num;
+        }
+        return (double) sum / list.size();
+    }
 }
