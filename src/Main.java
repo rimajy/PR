@@ -11,12 +11,10 @@ public class Main {
         String[] numbersArray = input.split("\\s+");
         List<Integer> numbers = new ArrayList<>();
 
-        // Конвертуємо рядок чисел в список цілих чисел
+        // Конвертуємо рядок чисел в список цілих 
         for (String numStr : numbersArray) {
             int number = Integer.parseInt(numStr);
             numbers.add(number);
         }
-
-
     }
 }
