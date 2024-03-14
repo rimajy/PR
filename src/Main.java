@@ -29,7 +29,9 @@ public class Main {
         for (String binary : binaryStrings) {
             System.out.println(binary);
         }
-
+        // Обчислюємо та виводимо медіану
+        double median = calculateMedian(numbers);
+        System.out.println("Медіана: " + median);
     }
     // Метод для конвертації десяткового числа в бінарне представлення у доповнювальному коді
     public static String decimalToBinary(int n) {
@@ -56,4 +58,15 @@ public class Main {
             }
         }
     }
+    // Метод для обчислення медіани
+    public static double calculateMedian(List<Integer> list) {
+        int size = list.size();
+        Collections.sort(list);
+        if (size % 2 == 0) {
+            return (double) (list.get(size / 2) + list.get(size / 2 - 1)) / 2;
+        } else {
+            return list.get(size / 2);
+        }
+    }
+
 }
